@@ -4,9 +4,9 @@ An approach to validating using z3 solver.
 
 ## About
 
-In an effort to reduce validation time of z3 formulas, the best of two random seeded server approach was utilized. In this approach, the z3 formula is sent to both servers, each set with a different seed, and if:
-a) both servers return within a couple of microseconds of each other it will read output and continue
-b) if either server returns first (by a signifcant margin), the other server is killed and restarted and the formula from the returned server is read.
+In an effort to reduce validation time of z3 formulas, the best of two random seeded servers approach was utilized. In this approach, the z3 formula is sent to two servers, each set with a different seed, and if:  
+  a) both servers return within a couple of microseconds of each other it will read output and continue.  
+  b) if either server returns first (by a signifcant margin), the other server is killed and restarted and the formula from the returned server is read.
 
 Through this approach, the longer validation times were able to be reduced.
 
